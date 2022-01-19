@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+<title>Cara Konfigurasi Ftp Server Debian 9 Di Virtualbox | Ruang Ilmu</title>
+<meta name="url" content="https://ruangilmu.github.io/cara-konfigurasi-ftp-server-debian-9-di-virtualbox/" />
+<meta property="og:url" content="https://ruangilmu.github.io/cara-konfigurasi-ftp-server-debian-9-di-virtualbox/">
+<meta property="article:author" content="Budi"> 
+<meta name="author" content="Budi">
+<link rel="canonical" href="https://ruangilmu.github.io/cara-konfigurasi-ftp-server-debian-9-di-virtualbox/">
+<link rel="preconnect" href="https://stackpath.bootstrapcdn.com">
+<link rel="dns-prefetch" href="https://stackpath.bootstrapcdn.com">
+<link rel="preconnect" href="https://code.jquery.com">
+<link rel="dns-prefetch" href="https://code.jquery.com">
+<link rel="preconnect" href="https://i.pinimg.com">
+<link rel="dns-prefetch" href="https://i.pinimg.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://ruangilmu.github.io/assets/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700">
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
+<link rel="stylesheet" href="https://ruangilmu.github.io/assets/css/main.css">
+<link rel="stylesheet" href="https://ruangilmu.github.io/assets/css/theme.css">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="/favicon.ico">
+<link rel="shortcut icon" href="/favicon.ico">
+    
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "articleSection": "post",
+    "name": "Cara Konfigurasi Ftp Server Debian 9 Di Virtualbox",
+    "headline": "Cara Konfigurasi Ftp Server Debian 9 Di Virtualbox",
+    "alternativeHeadline": "",
+    "description": "Cara Konfigurasi Ftp Server Debian 9 Di Virtualbox. Praktik yang harus dilakukan adalah: Masuk kedalam mode root pada server kalian masing masing dengan memasukan perintah su dan masukan password root kalian.",
+    "inLanguage": "en-us",
+    "isFamilyFriendly": "true",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/ruangilmu.github.io\/cara-konfigurasi-ftp-server-debian-9-di-virtualbox\/"
+    },
+    "author" : {
+        "@type": "Person",
+        "name": "Budi"
+    },
+    "creator" : {
+        "@type": "Person",
+        "name": "Budi"
+    },
+    "accountablePerson" : {
+        "@type": "Person",
+        "name": "Budi"
+    },
+    "copyrightHolder" : "Ruang Ilmu",
+    "copyrightYear" : "2021",
+    "dateCreated": "2021-12-13T17:57:19.00Z",
+    "datePublished": "2021-12-13T17:57:19.00Z",
+    "dateModified": "2022-01-19T00:00:00.00Z",
+    "publisher":{
+        "@type":"Organization",
+        "name": "Ruang Ilmu",
+        "url": "https://ruangilmu.github.io",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/ruangilmu.github.io\/logo.png",
+            "width":"32",
+            "height":"32"
+        }
+    },
+    "image": "https://ruangilmu.github.io/logo.png",
+    "url" : "https:\/\/ruangilmu.github.io\/cara-konfigurasi-ftp-server-debian-9-di-virtualbox\/",
+    "wordCount" : "1599",
+    "genre" : [ "sekolah" ],
+    "keywords" : [ "Cara" , "konfigurasi" , "ftp" , "server" , "debian" , "9" , "di" , "virtualbox" ]
+}
+</script>
+
+</head>
+  <body>    
+    <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="https://ruangilmu.github.io"><span style="text-transform: capitalize;font-weight: bold;">Ruang Ilmu</strong></a><button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse" id="navbarColor02" style="">
+            <ul class="navbar-nav mr-auto d-flex align-items-center">
+               
+               <li class="nav-item"><a class="nav-link" href="https://ruangilmu.github.io/contact/">Contact</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://ruangilmu.github.io/dmca/">Dmca</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://ruangilmu.github.io/privacy-policy/">Privacy Policy</a></li>
+               <li class="nav-item"><a class="nav-link" href="https://ruangilmu.github.io/about/">About</a></li><li class="nav-item"><a class="nav-link" style="text-transform: capitalize;" href="https://ruangilmu.github.io/categories/belajar/" title="Belajar">Belajar</a></li><li class="nav-item"><a class="nav-link" style="text-transform: capitalize;" href="https://ruangilmu.github.io/categories/pengetahuan/" title="Pengetahuan">Pengetahuan</a></li><li class="nav-item"><a class="nav-link" style="text-transform: capitalize;" href="https://ruangilmu.github.io/categories/sekolah/" title="Sekolah">Sekolah</a></li></ul>
+        </div>
+    </div>
+    </nav>
+    <main role="main" class="site-content">
+<div class="container">
+<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+        <div class="h-100 tofront">
+            <div class="row justify-content-between ">
+                <div class=" col-md-6 pr-0 pr-md-4 pt-4 pb-4 align-self-center">
+                    <p class="text-uppercase font-weight-bold"><span class="catlist"><a class="sscroll text-danger" href="https://ruangilmu.github.io/categories/pengetahuan"/>Pengetahuan</a> . </span></p>
+                    <h1 class="display-4 mb-4 article-headline">Cara Konfigurasi Ftp Server Debian 9 Di Virtualbox</h1>
+                    <div class="d-flex align-items-center">
+                        <small class="ml-3">Written by Budi <span class="text-muted d-block mt-1">Dec 13, 2021 · <span class="reading-time">8 min read</span></span></small>
+                    </div>
+                </div>
+                <div class="col-md-6 pr-0 align-self-center">
+                    <img class="rounded" src="https://s3.amazonaws.com/helpjuice-static/helpjuice_production%2Fuploads%2Fupload%2Fimage%2F6547%2Fdirect%2F1611131126954-1611131126954.png" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" alt="Cara Konfigurasi Ftp Server Debian 9 Di Virtualbox"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-lg pt-4 pb-4">
+    <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-8">
+            <article class="article-post">
+            <p></p><script type='text/javascript' src='//jd3j7g5z1fqs.com/96/78/7a/96787a1945876b1a9c10f79941441964.js'></script>
+<script type='text/javascript' src='//jd3j7g5z1fqs.com/b4/f1/ef/b4f1ef8dfe59b7fa68754094cf6c8e0e.js'></script>
+<p><strong>Cara Konfigurasi Ftp Server Debian 9 Di Virtualbox</strong>. Praktik yang harus dilakukan adalah: Masuk kedalam mode root pada server kalian masing masing dengan memasukan perintah su dan masukan password root kalian. Selanjutnya, kita install web server apache2 nya dengan memasukan perintah dibawah ini. Instalasi debian 9 (stretch) di virtualbox.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://2.bp.blogspot.com/-FJaMN7LztHU/XH4tn0veJqI/AAAAAAAABrY/LktLkUYec6IAC1vO-h0-tJzCnOUOPa38QCLcBGAs/s1600/4.png" alt="Cara Install dan Konfigurasi FTP Server Di Debian 9 Ashari R" title="Cara Install dan Konfigurasi FTP Server Di Debian 9 Ashari R" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Cara Install dan Konfigurasi FTP Server Di Debian 9 Ashari R From ashari-r.blogspot.com</p>
+<p><span class="navi text-left"><a class="badge badge-dark" href="/contoh-soal-akademik-matematika-bintara-polri-2020/">Contoh soal akademik matematika bintara polri 2020</a></span>
+<span class="navi text-left"><a class="badge badge-secondary" href="/contoh-sk-forum-anak-kelurahan/">Contoh sk forum anak kelurahan</a></span>
+<span class="navi text-left"><a class="badge badge-secondary" href="/contoh-rkh-paud-tema-diri-sendiri/">Contoh rkh paud tema diri sendiri</a></span>
+<span class="navi text-left"><a class="badge badge-primary" href="/contoh-sertifikat-juara-kelas/">Contoh sertifikat juara kelas</a></span></p>
+<p>Seperti sebelum sebelumnya pertama kalian harus mempunyai dvd debian iso 1 dan 2. Ketiga kalian instal terlebih dahulu. Maka kali ini masuk ke pembahasan tentang cara setting atau konfigurasi ntp server di debian 9. Sebelum melakukan konfigurasi, pastikan kita sudah menginstall linux debian 9 dan berikut ini cara untuk konfigurasi adapter virtual debian 9. Buka virtualbox,untuk cara menginstal ubuntu server dapat anda lihat disini. Disini sebagai contoh konfigurasi kali ini menggunakan virtualbox.</p>
+<h3 id="assalamualaikum-wrwb-disini-saya-akan-membuat-tutorial-bagaimana-cara-instal-dan-konfigurasi-ftp-server-di-debian-9-oke-langsung-saja-baca-artikel-dibawah-ini-ya">Assalamu’alaikum wr.wb disini saya akan membuat tutorial bagaimana cara instal dan konfigurasi ftp server di debian 9 oke langsung saja baca artikel dibawah ini ya!!!</h3><p>Cara install dan konfigurasi ajenti pada debian 9. Seperti sebelum sebelumnya pertama kalian harus mempunyai dvd debian iso 1 dan 2. Pertama pastikan konfigurasi network adapter di virtualbox seperti dibawah. Saya disini menggunakan debian versi 7, jika anda menggunakan beda versi seperti debian 8 atau debian 9, jangan khawatir karena caranya sama kok tidak ada perbedaan sama sekali untuk menginstall ftp di debian 8 maupun debian 9. Ftp atau file transfer protocol merupakan sebuah protokol yang digunakan untuk bertukar file melalui jaringan sebagai medianya. Debian 9 yang sudah di install 4.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://1.bp.blogspot.com/-6pLAbJTFhL0/XDDEcy53wqI/AAAAAAAAA2I/ZaXHuWuSGE4BiNSpxOur8arpMtVMIlXTgCLcBGAs/s640/Screenshot_3.png" alt="Cara Install dan Konfigurasi FTP di Debian Server Mas Fadli" title="Cara Install dan Konfigurasi FTP di Debian Server Mas Fadli" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Source: masfadli.com</p>
+<p>Cara install debian server di virtualbox. Pilih �standalone� kemudian enter, tunggu. Debian 9 yang sudah di install 4. Sebelum melakukan konfigurasi, pastikan kita sudah menginstall linux debian 9 dan berikut ini cara untuk konfigurasi adapter virtual debian 9. Maka dari itu saya berinisiatif untuk mencatat sekaligus membuatkan tutorial sebagai portofolio.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://1.bp.blogspot.com/-8n1ANQDcy3M/X2gs_q3UYcI/AAAAAAAAFBc/jM1Wb6Q3mCMbdSDHP6cnJ5qLGq4uKRbrgCLcBGAsYHQ/s800/VirtualBox_DEBIAN%2BSERVER%2B9_21_09_2020_11_31_39.png" alt="Cara Konfigurasi Web Server Di Debian 9 Catatan Shand" title="Cara Konfigurasi Web Server Di Debian 9 Catatan Shand" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Source: catatanshand.blogspot.com</p>
+<p>Debian 9 yang sudah di install 4. Cara install dan konfigurasi ajenti pada debian 9. Konfigurasi adapter di virtualbox debian 9. Setelah itu kita akan mencoba ping di server debian. Bagaimana cara setup server ftp vsftpd di debian 10 click to get the latest buzzing content.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://4.bp.blogspot.com/-eH9UbH7kS7s/XK-FuUuV5NI/AAAAAAAAK-M/OOCOAAqa1KgBiD1gxczRR62i2o598hzJwCLcBGAs/s1600/2.PNG" alt="CARA INSTAL DAN KONFIGURASI FTP SERVER DI DEBIAN 8 VIA" title="CARA INSTAL DAN KONFIGURASI FTP SERVER DI DEBIAN 8 VIA" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Source: mohamadbagoesaliyuddin04.blogspot.com</p>
+<p>Sebelum melakukan konfigurasi, pastikan kita sudah menginstall linux debian 9 dan berikut ini cara untuk konfigurasi adapter virtual debian 9. Ftp atau file transfer protocol adalah sebuah protokol internet untuk melakukan pengiriman file antar komputer melalui media jaringan. Kedua jika sudah membuka debian di vbox maka arahkan optival drive ke iso debian 2. Pertama pastikan konfigurasi network adapter di virtualbox seperti dibawah. Kita atur pengaturan jaringannya, disini kami menyetting seperti dibawah ini.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://4.bp.blogspot.com/-yE6lp5lgXdc/XH4sEEnk2MI/AAAAAAAABq0/Rj7n2TcaqZMgrnVkn2uERU35yUBwmMtQwCEwYBhgL/s1600/3.png" alt="Cara Install dan Konfigurasi FTP Server Di Debian 9 Ashari R" title="Cara Install dan Konfigurasi FTP Server Di Debian 9 Ashari R" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Source: ashari-r.blogspot.com</p>
+<p>Assalamu’alaikum wr.wb disini saya akan membuat tutorial bagaimana cara instal dan konfigurasi ftp server di debian 9 oke langsung saja baca artikel dibawah ini ya!!! Pada kesempatan kali ini kita akan belajar tentang cara instalasi dan konfigurasi ftp server di debian 7 pada oracle virtualbox. Konfigurasi jaringan pada debian 9. Setelah penginstallan, masuk ke dalam file dhcpd.conf dengan perintah nano / etc/dhcp/dhcpd.conf. Maka dari itu saya berinisiatif untuk mencatat sekaligus membuatkan tutorial sebagai portofolio.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://3.bp.blogspot.com/-V2v9Y1C0ppA/XK-F0eACPeI/AAAAAAAAK-w/RzaCRv5A_JcdQsiQWMKAW_v42Vlw5dTnQCLcBGAs/s1600/9.PNG" alt="CARA INSTAL DAN KONFIGURASI FTP SERVER DI DEBIAN 8 VIA" title="CARA INSTAL DAN KONFIGURASI FTP SERVER DI DEBIAN 8 VIA" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Source: mohamadbagoesaliyuddin04.blogspot.com</p>
+<p>Cara setting atau konfigurasi ntp server di debian 9. Installasi &amp; konfigurasi dns server debian 9 virtualbox. Bagaimana cara setup server ftp vsftpd di debian 10 click to get the latest buzzing content. Cara install debian server di virtualbox. Ftp, squid proxy dan lainnya yang bisa di gunakan dan di manfaatkan.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://musaamin.web.id/wp-content/uploads/2019/05/02.cara-install-dns-server-debian_named-conf-local.jpg" alt="Cara Install DNS Server di Debian 9 Server" title="Cara Install DNS Server di Debian 9 Server" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Source: musaamin.web.id</p>
+<p>Sebelum melakukan konfigurasi, pastikan kita sudah menginstall linux debian 9 dan berikut ini cara untuk konfigurasi adapter virtual debian 9. Kita atur pengaturan jaringannya, disini kami menyetting seperti dibawah ini. Ketiga kalian instal terlebih dahulu. Assalamu’alaikum wr.wb disini saya akan membuat tutorial bagaimana cara instal dan konfigurasi ftp server di debian 9 oke langsung saja baca artikel dibawah ini ya!!! Cara install dan konfigurasi ajenti pada debian 9.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://1.bp.blogspot.com/-5JVx9POnoew/XWoCAHszyxI/AAAAAAAABH0/u8-ywzrNb4MiiuulGa4VR7ZgatCnK5NnQCLcBGAs/s1600/Screenshot_12.jpg" alt="Cara Install Dan Konfigurasi FTP (proftpd) Server Di" title="Cara Install Dan Konfigurasi FTP (proftpd) Server Di" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Source: kevinsetyaone.blogspot.com</p>
+<p>Setelah penginstallan, masuk ke dalam file dhcpd.conf dengan perintah nano / etc/dhcp/dhcpd.conf. Cara install dan konfigurasi ajenit pada debian 9. Kedua jika sudah membuka debian di vbox maka arahkan optival drive ke iso debian 2. Konfigurasi adapter di virtualbox debian 9. Saya disini menggunakan debian versi 7, jika anda menggunakan beda versi seperti debian 8 atau debian 9, jangan khawatir karena caranya sama kok tidak ada perbedaan sama sekali untuk menginstall ftp di debian 8 maupun debian 9.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://i.ytimg.com/vi/XyTRMOU5zw4/maxresdefault.jpg" alt="Tutorial Cara Instalasi Dan Konfigurasi Proxy Di" title="Tutorial Cara Instalasi Dan Konfigurasi Proxy Di" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Source: youtube.com</p>
+<p>Sebelumnya telah dibahas mengenai cara install debian 9 minimal server dan cara setting repository di debian 9 server.kali ini masuk ke pembahasan mengenai cara setting jaringan di debian 9 server.setting jaringan meliputi ip address, dns, install tool yang berhubungan dengan jaringan, hostname, menjadikan debian sebagai internet gateway atau. Cara install dan konfigurasi ajenit pada debian 9. Konfigurasi jaringan pada debian 9. Konfigurasi adapter di virtualbox debian 9. Pada artikel sebelumnya saya telah membahas tentang cara install debian 9 minimal server.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://1.bp.blogspot.com/-RL-ee97xWl4/XWoChtIzXxI/AAAAAAAABIw/0RUMXRw0abIWxRu8ssG-_eLIA1M04OLTgCLcBGAs/s1600/FTP.jpg" alt="Cara Install Dan Konfigurasi FTP (proftpd) Server Di" title="Cara Install Dan Konfigurasi FTP (proftpd) Server Di" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Source: kevinsetyaone.blogspot.com</p>
+<p>Ketiga kalian instal terlebih dahulu. Sebelum melakukan konfigurasi, pastikan kita sudah menginstall linux debian 9 dan berikut ini cara untuk konfigurasi adapter virtual debian 9. Disini sebagai contoh konfigurasi kali ini menggunakan virtualbox. Pada artikel sebelumnya saya telah membahas tentang cara install debian 9 minimal server. Apabila muncul tulisan “ 64 bytes from 192.168.1.2.” berarti sukses.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://3.bp.blogspot.com/-eEbm3GiCokI/XH4sDyqQv9I/AAAAAAAABqw/yaeqw5gZDb8cR2OVuAiOSBfgmcG4HyezwCEwYBhgL/s1600/2.png" alt="Cara Install dan Konfigurasi FTP Server Di Debian 9 Ashari R" title="Cara Install dan Konfigurasi FTP Server Di Debian 9 Ashari R" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Source: ashari-r.blogspot.com</p>
+<p>Langsung saja kita masuk kedalam cara atau tutorial konfigurasi web server di debian 9 ini. Ada beberapa cara unduh wordpress di debian. Konfigurasi ftp server di debian. Cara membuat web server di virtual box. Ftp atau file transfer protocol merupakan sebuah protokol yang digunakan untuk bertukar file melalui jaringan sebagai medianya.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://1.bp.blogspot.com/-nfx9AwWuKHs/XRVD-8pzSjI/AAAAAAAACVc/Zv3vg7Dg1gEO6KCjM1f3UXRYyymO0291wCLcBGAs/s1600/7.webp" alt="Cara Konfigurasi FTP Server Di Debian 9 Lengkap Disertai" title="Cara Konfigurasi FTP Server Di Debian 9 Lengkap Disertai" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Source: flash-reset.blogspot.com</p>
+<p>Instalasi wordpress di debian 9 dan konfigurasi virtualhost. Ketiga kalian instal terlebih dahulu. Langkah selanjutnya adalah melakukan setting repository yang menjadi server gudang aplikasi. Setelah penginstallan, masuk ke dalam file dhcpd.conf dengan perintah nano / etc/dhcp/dhcpd.conf. Konfigurasi ftp server di debian.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://4.bp.blogspot.com/-Hiiiqva0zWA/XH4tn5eO3JI/AAAAAAAABrU/XDKfzzjuzKIrDqZ4aEGRGecQ_ODjSPgAgCLcBGAs/s1600/5.png" alt="Cara Install dan Konfigurasi FTP Server Di Debian 9 Ashari R" title="Cara Install dan Konfigurasi FTP Server Di Debian 9 Ashari R" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Source: ashari-r.blogspot.com</p>
+<p>Sebelum melakukan konfigurasi, pastikan kita sudah menginstall linux debian 9 dan berikut ini cara untuk konfigurasi adapter virtual debian 9. Cara membuat web server di virtual box. Konfigurasi adapter di virtualbox debian 9. Ketiga kalian instal terlebih dahulu. Cara install debian server di virtualbox.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://1.bp.blogspot.com/-EE1zWwj3Pp4/XWoCBx8-hdI/AAAAAAAABII/2Arh3ubPjIk8i_o6l_jbR7oCJtNUPY-HACLcBGAs/s1600/Screenshot_6.jpg" alt="Cara Install Dan Konfigurasi FTP (proftpd) Server Di" title="Cara Install Dan Konfigurasi FTP (proftpd) Server Di" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Source: kevinsetyaone.blogspot.com</p>
+<p>Pertama pastikan konfigurasi network adapter di virtualbox seperti dibawah. Take a sneak peak at the movies coming out this week (8 12) best romantic christmas movies to watch; Installasi dan konfiguasi web server debian 9 di virtualbox berikutnya next post: Silahkan lakukan instalasi terlebih dahulu, saya asumsikan bahwa sobat telah melakukan instalasi debian dan konfigurasi network. Masuk kedalam mode root pada server kalian masing masing dengan memasukan perintah su dan masukan password root kalian.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://1.bp.blogspot.com/-IjbolodiTQE/XZdsaLWpInI/AAAAAAAABSg/8_m5ZkaMaEIUl7JlBsLuBnygVkkrBO8nQCLcBGAsYHQ/s1600/Screenshot_15.png" alt="Cara Install dan Konfigurasi FTP (vsftpd) Server di Debian" title="Cara Install dan Konfigurasi FTP (vsftpd) Server di Debian" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Source: kevinsetyaone.blogspot.com</p>
+<p>Oktober 2018 oktober 2018 joko haribowo. Karena kita akan menginstal debian 9 yang 32 bit kemudian lanjut seperti gambar di bawah ini. Disini saya menggunakan 1 client debian dari virtualbox dan 1 client lagi dari windows laptop. Maka kali ini masuk ke pembahasan tentang cara setting atau konfigurasi ntp server di debian 9. Cara install ehcp di debian 9 agus nuri fadli debian , server , tutorial comment ehcp atau easy hosting control panel adalah salah satu aplikasi open source dan ditulis dengan bahasa pemograman php yang berguna sebagai control panel.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://2.bp.blogspot.com/-1Qhl47838Lw/XDDEeENXTmI/AAAAAAAAA2U/0-l0aUTZ5VEQ1Us3fYJqyzr_WeMfzM5gACLcBGAs/s640/Screenshot_4.png" alt="Cara Install dan Konfigurasi FTP di Debian Server Mas Fadli" title="Cara Install dan Konfigurasi FTP di Debian Server Mas Fadli" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Source: masfadli.com</p>
+<p>Cara membuat web server di virtual box. Cara membuat virtual machine di virtualbox cara install linux debian 9 3. Selanjutnya, kita install web server apache2 nya dengan memasukan perintah dibawah ini. Ftp atau file transfer protocol merupakan sebuah protokol yang digunakan untuk bertukar file melalui jaringan sebagai medianya. Konfigurasi jaringan pada debian 9.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://1.bp.blogspot.com/-UQmHOfjp50Y/XWoCA7z-xHI/AAAAAAAABH8/zHMcPW_GJBMltfVGR6wxetc3Vd6MyZt3ACLcBGAs/s1600/Screenshot_3.jpg" alt="Cara Install Dan Konfigurasi FTP (proftpd) Server Di" title="Cara Install Dan Konfigurasi FTP (proftpd) Server Di" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Source: kevinsetyaone.blogspot.com</p>
+<p>Ftp atau file transfer protocol merupakan sebuah protokol yang digunakan untuk bertukar file melalui jaringan sebagai medianya. Cara install linux debian 9 4. Konfigurasi adapter di virtualbox debian 9. Konfigurasi ip address untuk interface yang terhubung dengan isp menggunakan network yang sama dengan isp, hal ini bertujuan agar server mendapat internet. Melakukan konfigurasi pada ip address merupakan tahap yang pertama untuk mengenal internet protokol pada devices yang akan kita lakukan konfigurasi sebagai simulasi server menggunakan virtualbox.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://benisnous.com/wp-content/uploads/2021/08/Tutorial-Cara-Install-Dan-Konfigurasi-Interface-Dan-Server-Debian-Di-800x445.jpg" alt="Tutorial Cara Install Dan Konfigurasi Interface Dan Server" title="Tutorial Cara Install Dan Konfigurasi Interface Dan Server" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Source: benisnous.com</p>
+<p>Konfigurasi ftp server di debian. Cara setting repository di debian 9 server. Cara konfigurasi ip address di debian pada virtualbox sebelum mau konfigurasi ip address, kamu. Cara install ehcp di debian 9 agus nuri fadli debian , server , tutorial comment ehcp atau easy hosting control panel adalah salah satu aplikasi open source dan ditulis dengan bahasa pemograman php yang berguna sebagai control panel. Ftp adalah salah satu protokol paling tua yang ada dan.</p>
+<p><img loading="lazy" width="100%" src="https://ruangilmu.github.io/img/placeholder.svg" data-src="https://s3.amazonaws.com/helpjuice-static/helpjuice_production%2Fuploads%2Fupload%2Fimage%2F6547%2Fdirect%2F1611131126954-1611131126954.png" alt="Cara Install FTP Server di Ubuntu, CentOS, Debian 9" title="Cara Install FTP Server di Ubuntu, CentOS, Debian 9" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';" class="center" />
+Source: kb.biznetgio.com</p>
+<p>Apabila muncul tulisan “ 64 bytes from 192.168.1.2.” berarti sukses. Berikut adalah konfigurasi dhcp server: Pilih �standalone� kemudian enter, tunggu. Maka dari itu saya berinisiatif untuk mencatat sekaligus membuatkan tutorial sebagai portofolio. Pada artikel sebelumnya saya telah membahas tentang cara install debian 9 minimal server.</p>
+<p>This site is an open community for users to share their favorite wallpapers on the internet, all images or pictures in this website are for personal wallpaper use only, it is stricly prohibited to use this wallpaper for commercial purposes, if you are the author and find this image is shared without your permission, please kindly raise a DMCA report to Us.</p>
+<p>If you find this site value, please support us by sharing this posts to your favorite social media accounts like Facebook, Instagram and so on or you can also save this blog page with the title cara konfigurasi ftp server debian 9 di virtualbox by using Ctrl + D for devices a laptop with a Windows operating system or Command + D for laptops with an Apple operating system. If you use a smartphone, you can also use the drawer menu of the browser you are using. Whether it&rsquo;s a Windows, Mac, iOS or Android operating system, you will still be able to bookmark this website.</p>
+</article>
+            <div class="row"><div class="posts-image" style="width:50%;"><a style="margin:5px;" href="/harga-tiket-bioskop-cgv-padang/">&laquo;&laquo;&nbsp;Harga Tiket Bioskop Cgv Padang</a></div>
+    <div class="posts-image" style="width:50%"><a style="margin:5px;" href="/pleci-buka-paruh/">Pleci Buka Paruh&nbsp;&raquo;&raquo;</a></div></div>
+            
+            <div class="mb-4">
+                <span class="taglist"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+<div class="container pt-4 pb-4">
+    
+    <h5 class="font-weight-bold spanborder"><span>Read next</span></h5>
+    <div class="row">
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/materi-tik-kelas-11-semester-2/"><img height="80" src="/img/placeholder.svg" data-src="https://3.bp.blogspot.com/-_4_HQR_Nf1w/W1Mbmra6D0I/AAAAAAAAAKk/sYWTO7j0TrclHZ4Lu9aRfLcV-TEmgSD6ACLcBGAs/s1600/F.png" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/materi-tik-kelas-11-semester-2/">Materi Tik Kelas 11 Semester 2</a>
+                        </h2>
+                        <small class="text-muted">Jan 11 . 9 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/sk-mengajar-tpq/"><img height="80" src="/img/placeholder.svg" data-src="http://image.slidesharecdn.com/suratketeranganmengajar-121219194927-phpapp02/95/surat-keterangan-mengajar-1-638.jpg?cb=1355968210" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/sk-mengajar-tpq/">Sk Mengajar Tpq</a>
+                        </h2>
+                        <small class="text-muted">Nov 09 . 8 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/kata-takziah-kematian/"><img height="80" src="/img/placeholder.svg" data-src="https://i0.wp.com/1.bp.blogspot.com/-2aYOEuVOYXw/XZe4PXheD2I/AAAAAAAAIhQ/PVz_Z3URL10Qvg2zIkYsx-8zsPuFWbQlwCNcBGAsYHQ/s1600/Motivasi%2Bislam%2Bingat%2Bkematian%2B%25282%2529.jpg?w=730" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/kata-takziah-kematian/">Kata Takziah Kematian</a>
+                        </h2>
+                        <small class="text-muted">Oct 15 . 8 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/manfaat-surat-at-taubah-128-129/"><img height="80" src="/img/placeholder.svg" data-src="https://2.bp.blogspot.com/-_K7Um6t2qeE/T4LsEfvrvSI/AAAAAAAAABk/P3s_3sdUBUM/s1600/at&#43;taubah.jpg" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/manfaat-surat-at-taubah-128-129/">Manfaat Surat At Taubah 128 129</a>
+                        </h2>
+                        <small class="text-muted">Jan 06 . 8 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/bobodoran-sunda-kang-ibing/"><img height="80" src="/img/placeholder.svg" data-src="https://i.ytimg.com/vi/s3ErsWkyEG0/maxresdefault.jpg" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/bobodoran-sunda-kang-ibing/">Bobodoran Sunda Kang Ibing</a>
+                        </h2>
+                        <small class="text-muted">Dec 27 . 9 min read</small>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="mb-3 d-flex align-items-center">
+                    <a href="/denah-rumah-ukuran-5x7-m-2-lantai/"><img height="80" src="/img/placeholder.svg" data-src="https://1.bp.blogspot.com/-5VUXwEUTTjs/XQwFG2ck_oI/AAAAAAAAPaw/hVNjFCeJj4gXS1DTR7yd9T0t1aKHDw_vQCLcBGAs/w1200-h630-p-k-no-nu/c56%2Blt200%2Blb161%2B10x20.jpg" onerror="this.onerror=null;this.src='https:\/\/ruangilmu.github.io\/img\/placeholder.svg';"/></a>
+                    <div class="pl-3">
+                        <h2 class="mb-2 h6 font-weight-bold">
+                        <a class="text-dark" href="/denah-rumah-ukuran-5x7-m-2-lantai/">Denah Rumah Ukuran 5x7 M 2 Lantai</a>
+                        </h2>
+                        <small class="text-muted">Oct 13 . 11 min read</small>
+                    </div>
+                </div>
+        </div>
+</div>
+</div>
+</div>
+    </main>    <script async="async" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script async="async" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script async="async" src="https://ruangilmu.github.io/assets/js/theme.js"></script>
+    <script>function init(){var imgDefer=document.getElementsByTagName('img');for (var i=0; i<imgDefer.length; i++){if(imgDefer[i].getAttribute('data-src')){imgDefer[i].setAttribute('src',imgDefer[i].getAttribute('data-src'));}}}window.onload=init;</script>
+    
+    <footer class="bg-white border-top p-3 text-muted small">
+        <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div><span style="text-transform: capitalize;"><a href="https://ruangilmu.github.io">Ruang Ilmu</a> Copyright &copy; 2022.</span></div>
+            
+        </div>
+        </div>
+    </footer>
+  </body>
+</html>
